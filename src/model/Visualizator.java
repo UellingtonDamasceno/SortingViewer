@@ -16,11 +16,11 @@ public class Visualizator extends DrawableApplication {
 
     private final Algorithm algorithm;
 
-    public Visualizator(String name, double vertexLenght, Algorithm algorithm){
+    public Visualizator(String name, double vertexLenght, Algorithm algorithm) {
         this(name, vertexLenght, vertexLenght, algorithm);
     }
-    
-    public Visualizator(String name, double width, double height,Algorithm algorithm) {
+
+    public Visualizator(String name, double width, double height, Algorithm algorithm) {
         super(name, width, height);
         this.algorithm = algorithm;
     }
@@ -29,8 +29,8 @@ public class Visualizator extends DrawableApplication {
     public void update() {
         if (!this.algorithm.isComplete()) {
             this.algorithm.nextStep();
-            this.algorithm.render(graphic);
         }
+        this.algorithm.render(graphic);
     }
 
 }

@@ -1,6 +1,6 @@
 package view;
 
-import algorithms.SelectionSort;
+import algorithms.InsertionSort;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -18,9 +18,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Algorithm algorithm = new SelectionSort(400);
+        Algorithm algorithm = new InsertionSort(400);
         Visualizator app = new Visualizator("Algorithms Visualizator", 400, algorithm);
-        Loop gameLoop = new Loop(app, 60);
+        Loop gameLoop = new Loop(app, 30);
 
         Scene scene = new Scene(new Pane(app.getCanvas()));
         primaryStage.setScene(scene);
