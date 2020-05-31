@@ -1,6 +1,6 @@
 package view;
 
-import algorithms.BubbleSort;
+import algorithms.SelectionSort;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -18,9 +18,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Algorithm bubbleSort = new BubbleSort(400);
-        Visualizator app = new Visualizator("Algorithms Visualizator", 400, bubbleSort);
-        Loop gameLoop = new Loop(app, 1000);
+        Algorithm algorithm = new SelectionSort(400);
+        Visualizator app = new Visualizator("Algorithms Visualizator", 400, algorithm);
+        Loop gameLoop = new Loop(app, 60);
 
         Scene scene = new Scene(new Pane(app.getCanvas()));
         primaryStage.setScene(scene);

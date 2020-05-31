@@ -22,7 +22,6 @@ public class BubbleSort extends Algorithm {
     @Override
     public void render(GraphicsContext graphic) {
         graphic.setStroke(Color.WHITE);
-        graphic.setLineWidth(1);
         for (int current = 0; current < values.length; current++) {
             graphic.setStroke((current == j) ? Color.RED : Color.WHITE);
             graphic.strokeLine(current, 0, current, this.values[current]);

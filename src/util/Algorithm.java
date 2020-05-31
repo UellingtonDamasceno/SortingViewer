@@ -14,10 +14,10 @@ public abstract class Algorithm implements Drawable {
 
     protected Integer[] values;
 
-    public Algorithm(int max){
+    public Algorithm(int max) {
         this(0, max);
     }
-    
+
     public Algorithm(int min, int max) {
         this.values = this.getRandomValues(min, max);
     }
